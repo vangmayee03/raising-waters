@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predict Floods</title>
+
+    <style>
+        body {
+            margin:0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #e8e6e3;
+        }
+
+        /* NAVBAR */
+        .header {
+            background:black;
+            padding:15px;
+            font-size:24px;
+            color:lime;
+        }
+
+        .nav {
+            float:right;
+            font-size:18px;
+        }
+
+        .nav a {
+            color:white;
+            text-decoration:none;
+            margin-left:20px;
+        }
+
+        /* FORM CONTAINER */
+        .container {
+            width:60%;
+            margin:80px auto;
+        }
+
+        .row {
+            display:flex;
+            justify-content:space-between;
+            margin-bottom:20px;
+        }
+
+        .column {
+            width:48%;
+        }
+
+        label {
+            font-weight:bold;
+            font-size:14px;
+        }
+
+        input {
+            width:100%;
+            padding:8px;
+            margin-top:5px;
+            border:1px solid #ccc;
+            border-radius:4px;
+        }
+
+        button {
+            padding:8px 16px;
+            font-size:14px;
+            background-color:#dcdcdc;
+            border:1px solid #aaa;
+            border-radius:4px;
+            cursor:pointer;
+        }
+
+        button:hover {
+            background:#c8c8c8;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="header">
+    Floods Prediction
+    <div class="nav">
+        <a href="/">Home</a>
+    </div>
+</div>
+
+<div class="container">
+
+    <form action="/result" method="post">
+
+        <div class="row">
+            <div class="column">
+                <label>Cloud Cover</label>
+                <input type="text" name="cloud" placeholder="Cloud Cover Percentage (%)" required>
+            </div>
+
+            <div class="column">
+                <label>Annual Rain Fall</label>
+                <input type="text" name="annual" placeholder="Enter Annual Rain Fall in mm" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <label>Jan-Feb Rainfall</label>
+                <input type="text" name="jan_feb" placeholder="Jan-Feb Rainfall in mm" required>
+            </div>
+
+            <div class="column">
+                <label>June-September</label>
+                <input type="text" name="jun_sep" placeholder="June-September Rainfall in mm" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <label>March-May Rainfall</label>
+                <input type="text" name="mar_may" placeholder="March-May Rainfall in mm" required>
+                <button type="submit">Predict</button>
+            </div>
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>

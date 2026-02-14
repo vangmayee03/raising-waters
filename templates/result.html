@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flood Prediction Result</title>
+
+    <style>
+        body {
+            margin:0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color:#e8e6e3;
+        }
+
+        /* NAVBAR */
+        .header {
+            background:black;
+            padding:15px;
+            font-size:24px;
+            color:lime;
+        }
+
+        .nav {
+            float:right;
+            font-size:18px;
+        }
+
+        .nav a {
+            color:white;
+            text-decoration:none;
+            margin-left:20px;
+        }
+
+        /* RESULT TEXT */
+        .result-container {
+            text-align:center;
+            margin-top:140px;
+            font-size:20px;
+            color:#555;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="header">
+    Floods Prediction
+    <div class="nav">
+        <a href="/">Home</a>
+        <a href="/predict">Predict Floods</a>
+    </div>
+</div>
+
+<div class="result-container">
+    {{ prediction }}
+</div>
+
+</body>
+</html>
